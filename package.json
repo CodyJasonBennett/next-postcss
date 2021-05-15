@@ -1,6 +1,6 @@
 {
   "name": "next-postcss",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PostCSS for Next.js",
   "repository": "https://github.com/CodyJasonBennett/next-postcss.git",
   "author": "Cody Bennett <hi@codyb.co>",
@@ -11,7 +11,7 @@
     "extracted-loader": "1.0.4",
     "find-up": "2.1.0",
     "ignore-loader": "0.1.2",
-    "mini-css-extract-plugin": "0.4.3",
+    "mini-css-extract-plugin": "0.8.0",
     "postcss-loader": "3.0.0"
   },
   "devDependencies": {
