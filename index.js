@@ -41,19 +41,6 @@ module.exports = (nextConfig = {}) => {
         extractCssInitialized = true;
       }
 
-      const cssLoader = {
-        loader: 'css-loader',
-        options: Object.assign(
-          {},
-          {
-            modules: cssModules,
-            sourceMap: dev,
-            importLoaders: postcssLoader ? 1 : 0,
-          },
-          cssLoaderOptions
-        ),
-      };
-
       const postcssConfig = findUp.sync(
         ['postcss.config.js', '.postcssrc', '.postcssrc.js', '.postcssrc.json'],
         {
@@ -73,6 +60,19 @@ module.exports = (nextConfig = {}) => {
         options: Object.assign({}, postcssLoaderOptions, {
           postcssOptions: postcssOptionsConfig,
         }),
+      };
+
+      const cssLoader = {
+        loader: 'css-loader',
+        options: Object.assign(
+          {},
+          {
+            modules: cssModules,
+            sourceMap: dev,
+            importLoaders: postcssLoader ? 1 : 0,
+          },
+          cssLoaderOptions
+        ),
       };
 
       options.defaultLoaders.css = isServer
