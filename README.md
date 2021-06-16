@@ -1,6 +1,6 @@
 # next-postcss
 
-Import `.css` files in your Next.js project.
+Import `.css` files in your Next.js project with PostCSS.
 
 ## Installation
 
@@ -129,7 +129,7 @@ module.exports = withCSS({
 });
 ```
 
-Create a `postcss.config.js`
+Create a `postcss.config.js` or `.postcssrc`
 
 ```js
 module.exports = {
@@ -153,7 +153,7 @@ Create a CSS file `style.css` the CSS here is using the css-variables postcss pl
 }
 ```
 
-When `postcss.config.js` is not found `postcss-loader` will not be added and will not cause overhead.
+When `postcss.config.js` or `.postcss` are not found `postcss-loader` will not be added and will not cause overhead.
 
 You can also pass a list of options to the `postcss-loader` by passing an object called `postcssLoaderOptions`.
 
@@ -165,7 +165,7 @@ const withCSS = require('next-postcss');
 module.exports = withCSS({
   postcssLoaderOptions: {
     parser: true,
-    config: {
+    postcssOptions: {
       ctx: {
         theme: JSON.stringify(process.env.REACT_APP_THEME),
       },
