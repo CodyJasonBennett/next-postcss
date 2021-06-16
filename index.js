@@ -48,7 +48,7 @@ module.exports = (nextConfig = {}) => {
           {
             modules: cssModules,
             sourceMap: dev,
-            importLoaders: loaders.length + (postcssLoader ? 1 : 0),
+            importLoaders: postcssLoader ? 1 : 0,
           },
           cssLoaderOptions
         ),
