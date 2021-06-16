@@ -1,6 +1,6 @@
 {
   "name": "next-postcss",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0",
   "description": "PostCSS for Next.js",
   "repository": "https://github.com/CodyJasonBennett/next-postcss.git",
   "author": "Cody Bennett <hi@codyb.co>",

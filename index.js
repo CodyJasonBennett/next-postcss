@@ -48,8 +48,7 @@ module.exports = (nextConfig = {}) => {
         }
       );
       const postcssOptionsConfig = Object.assign(
-        {},
-        postcssLoaderOptions.postcssOptions,
+        postcssLoaderOptions ? postcssLoaderOptions.postcssOptions : {},
         {
           path: postcssConfig,
         }
